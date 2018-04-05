@@ -43,18 +43,18 @@ function gfdp_options_page(){
 }
 
 
-add_action('check_for_expired_entries', 'checkForExpiredEntries');
+add_action('gfdp_check_for_expired_entries', 'gfdp_checkForExpiredEntries');
 
-function activateCheckForExpiredEntries() {
+function gfdp_activateCheckForExpiredEntries() {
 	if ( !wp_next_scheduled( 'check_for_expired_entries' ) ) {
 		wp_schedule_event( current_time( 'timestamp' ), 'hourly', 'check_for_expired_entries');
 	}
 }
 
-add_action('wp', 'activateCheckForExpiredEntries');
+add_action('wp', 'gfdp_activateCheckForExpiredEntries');
 
 
-function checkForExpiredEntries() {
+function gfdp_checkForExpiredEntries() {
 	if( get_option('gfdp_option_name') != '' ){
 
         //see which entries are over the allowed time
