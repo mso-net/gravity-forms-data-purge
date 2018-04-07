@@ -47,7 +47,7 @@ add_action('gfdp_check_for_expired_entries', 'gfdp_checkForExpiredEntries');
 
 function gfdp_activateCheckForExpiredEntries() {
 	if ( !wp_next_scheduled( 'gfdp_check_for_expired_entries' ) ) {
-		wp_schedule_event( current_time( 'timestamp' ), 'hourly', 'gfdp_checkForExpiredEntries');
+		wp_schedule_event( current_time( 'timestamp' ), 'hourly', 'gfdp_check_for_expired_entries');
 	}
 }
 
