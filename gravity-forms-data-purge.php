@@ -4,7 +4,7 @@ Plugin Name: Gravity Forms Data Purge
 Plugin URI: https://github.com/mso-net/gravity-forms-data-purge/
 Description: Adds the ability to purge gravity form entries after a certain amount of time to comply with GDPR.
 Author: mso.net
-Version: 1.0.2
+Version: 1.0.3
 Author URI: https://www.mso.net/
 Text Domain: gravity-forms-data-purge
 Domain Path: /languages
@@ -63,7 +63,7 @@ function gfdp_checkForExpiredEntries() {
 
 		$expiredEntryTime = '-'.get_option('gfdp_option_name').' days';
 
-		$start_date = date( 'Y-m-d', strtotime('-365 days') );
+		$start_date = date( 'Y-m-d', strtotime('-3650 days') );
 		$end_date = date( 'Y-m-d', strtotime( $expiredEntryTime ));
 		$paging = array( 'offset' => 0, 'page_size' => 10000 );
 		$search_criteria['start_date'] = $start_date;
