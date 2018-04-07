@@ -4,7 +4,7 @@ Plugin Name: Gravity Forms Data Purge
 Plugin URI: https://github.com/mso-net/gravity-forms-data-purge/
 Description: Adds the ability to purge gravity form entries after a certain amount of time to comply with GDPR.
 Author: mso.net
-Version: 1.0.3
+Version: 1.0.4
 Author URI: https://www.mso.net/
 Text Domain: gravity-forms-data-purge
 Domain Path: /languages
